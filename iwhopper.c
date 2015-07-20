@@ -117,7 +117,7 @@ int main(int argc, char ** argv){
 
 	/* the channel changing loop */
 	while(1){
-		char c_chans[strlen(chans)];
+		char c_chans[strlen(chans)+1];
 		strcpy(c_chans, chans); //strtok is destructive, so it gets a copy to work on
 		chan = strtok(c_chans, &delim);
 		while (chan){ //loop once through the channel list
